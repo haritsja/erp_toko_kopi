@@ -39,14 +39,16 @@
     </style>  
 </head>  
 <body>  
-    <div class="sidebar">  
-        <h2 class="text-white text-center">Menu</h2>  
-        <a href="/dashboard">Dashboard</a>  
-        <a href="/products">Produk</a>  
-        <a href="/sales">Penjualan</a>  
-        <a href="/customers">Pelanggan</a>  
-        <a href="/logout">Logout</a>  
-    </div>  
+<div class="sidebar">    
+    <h2 class="text-white text-center">Menu</h2>    
+    <a href="/dashboard">Dashboard</a>    
+    <a href="/products">Produk</a>    
+    <a href="/sales">Penjualan</a>    
+    <a href="/customers">Pelanggan</a>    
+    <a href="/transactions">Transaksi</a>  <!-- Tambahkan tautan ini -->  
+    <a href="/logout">Logout</a>    
+</div>  
+
   
     <div class="content">  
         <div class="container mt-5">  

@@ -8,6 +8,20 @@ class DashboardController extends Controller
 {  
     public function index()  
     {  
-        return view('dashboard'); // Pastikan nama file view sesuai  
+        // Pastikan pengguna sudah terautentikasi  
+        if (auth()->check()) {  
+            $user = auth()->user(); // Mendapatkan pengguna yang sedang login  
+  
+            // Cek role pengguna  
+            if ($user->hasRole('admin')) {  
+                // Akses untuk admin  
+                return view('admin.dashboard');  
+            } elseif ($user->hasRole('kasir')) {  
+                // Akses untuk kasir  
+                return view('kasir.dashboard');  
+            }  
+        }  
+  
+        return redirect('/'); // Redirect jika tidak memiliki akses  
     }  
 }  

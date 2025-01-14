@@ -4,6 +4,7 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">  
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
     <title>Dashboard Produk ERP Toko Kopi</title>  
     <style>  
         body {  
@@ -49,13 +50,56 @@
         <div class="container">  
             <h2>Total Produk</h2>  
             <p id="total-products">0</p>  
-            <!-- Tambahkan grafik atau tabel produk di sini -->  
+  
+            <h3>Daftar Produk</h3>  
+            <table class="table table-bordered">  
+                <thead>  
+                    <tr>  
+                        <th>Nama Produk</th>  
+                        <th>Kategori</th>  
+                        <th>Harga</th>  
+                        <th>Stok</th>  
+                    </tr>  
+                </thead>  
+                <tbody>  
+                    <tr>  
+                        <td>Kopi Arabika</td>  
+                        <td>Kopi</td>  
+                        <td>Rp 50.000</td>  
+                        <td>100</td>  
+                    </tr>  
+                    <tr>  
+                        <td>Kopi Robusta</td>  
+                        <td>Kopi</td>  
+                        <td>Rp 45.000</td>  
+                        <td>80</td>  
+                    </tr>  
+                    <tr>  
+                        <td>Kopi Luwak</td>  
+                        <td>Kopi</td>  
+                        <td>Rp 200.000</td>  
+                        <td>50</td>  
+                    </tr>  
+                    <tr>  
+                        <td>Kopi Toraja</td>  
+                        <td>Kopi</td>  
+                        <td>Rp 60.000</td>  
+                        <td>70</td>  
+                    </tr>  
+                    <tr>  
+                        <td>Kopi Sumatra</td>  
+                        <td>Kopi</td>  
+                        <td>Rp 55.000</td>  
+                        <td>90</td>  
+                    </tr>  
+                </tbody>  
+            </table>  
         </div>  
     </div>  
   
     <script>  
         // Data dummy untuk total produk  
-        document.getElementById('total-products').innerText = 100; // Ganti dengan data nyata  
+        document.getElementById('total-products').innerText = 5; // Ganti dengan data nyata  
     </script>  
 </body>  
 </html>  
