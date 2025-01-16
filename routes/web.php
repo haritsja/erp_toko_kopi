@@ -10,7 +10,16 @@
   use App\Http\Controllers\Auth\LoginController;    
   use App\Http\Controllers\LandingPageController; // Impor LandingPageController
   use App\Http\Controllers\TransactionController;  
-  use App\Http\Controllers\FinanceController;  
+  use App\Http\Controllers\FinanceController;
+  use App\Http\Controllers\SupplierController;     
+  use App\Http\Controllers\UserController;  
+  use App\Http\Controllers\AuditLogController;  
+  
+
+
+
+
+  
   
 
 
@@ -28,7 +37,10 @@
   Route::resource('products', ProductController::class);    
   Route::resource('transactions', TransactionController::class);   
   Route::resource('customers', CustomerController::class);
-  Route::resource('finances', FinanceController::class);      
+  Route::resource('finances', FinanceController::class);
+  Route::resource('suppliers', SupplierController::class);  
+  Route::resource('users', UserController::class);
+  Route::get('audit-logs', [AuditLogController::class, 'index'])->name('audit-logs.index');         
     
   // Rute untuk keranjang belanja  
   Route::get('/cart', [CartController::class, 'index'])->middleware('auth');    
